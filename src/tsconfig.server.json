@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "angularCompilerOptions": {
+    "entryModule": "./server-app.module#ServerAppModule"
+  },
+  "include": [
+    "./main.browser.ts",
+    "./externalComponent/external.module.ts"
+  ]
+}
