@@ -1,11 +1,4 @@
 "use strict";
-/**
- * Generated bundle index. Do not edit.
- */
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("./index"));
-var external_component_1 = require("./externalComponent/external.component");
-exports.ɵa = external_component_1.ExternalComponent;
+var external_module_1 = require("./externalComponent/external.module");
+exports.ExternalModule = external_module_1.ExternalModule;

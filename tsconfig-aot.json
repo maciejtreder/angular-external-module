@@ -1,22 +1,9 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "baseUrl": "src",
     "declaration": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": [
-      "es6",
-      "es2015",
-      "dom"
-    ],
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "outDir": "./release/src",
-    "sourceMap": false,
-    "typeRoots": [
-      "./node_modules/@types"
-    ]
+    "outDir": "./release/src"
   },
   "files": [
     "./src/index.ts"
@@ -24,10 +11,9 @@
   "angularCompilerOptions": {
     "genDir": "release",
     "skipTemplateCodegen": true,
-    "debug": true,
-    "entryModule": "index#ModuleAModule",
-    "flatModuleOutFile": "index",
-    "flatModuleId": "@angular-external-module",
+    "entryModule": "index#ExternalModule",
+//    "flatModuleOutFile": "index",
+//    "flatModuleId": "@angular-universal-serverless/external-module",
     "skipMetadataEmit": false,
     "strictMetadataEmit": true
   }

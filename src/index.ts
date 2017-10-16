@@ -1,1 +1,1 @@
-export * from './externalComponent/external.module';
+export { ExternalModule } from './externalComponent/external.module';
