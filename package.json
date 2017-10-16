@@ -15,6 +15,7 @@
     "pretest": "npm run build",
     "start": "npm run build && npm run server",
     "build": "webpack",
+    "build:aot": "node_modules/.bin/ngc -p tsconfig-aot.json",
     "prebuild": "rimraf dist",
     "server": "nodemon ./dist/server.js",
     "watch": "concurrently \"webpack --watch\" \"npm run server\"",
@@ -35,6 +36,7 @@
     "@angular/platform-browser-dynamic": "4.4.5",
     "@angular/platform-server": "4.4.5",
     "@angular/router": "4.4.5",
+    "@angular/compiler-cli": "4.4.5",
     "@nguniversal/express-engine": "^1.0.0-beta.2",
     "body-parser": "^1.17.2",
     "compression": "^1.6.2",
@@ -45,8 +47,20 @@
     "xhr2": "^0.1.4",
     "zone.js": "^0.8.8"
   },
+  "peerDependencies": {
+    "@angular/animations": "4.4.5",
+    "@angular/common": "4.4.5",
+    "@angular/compiler": "4.4.5",
+    "@angular/core": "4.4.5",
+    "@angular/forms": "4.4.5",
+    "@angular/http": "4.4.5",
+    "@angular/platform-browser": "4.4.5",
+    "@angular/platform-browser-dynamic": "4.4.5",
+    "@angular/platform-server": "4.4.5",
+    "@angular/router": "4.4.5",
+    "@angular/compiler-cli": "4.4.5"
+  },
   "devDependencies": {
-    "@angular/compiler-cli": "4.4.5",
     "@ngtools/webpack": "1.7.4",
     "@types/express": "^4.0.35",
     "@types/hammerjs": "^2.0.34",
