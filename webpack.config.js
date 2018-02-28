@@ -3,7 +3,7 @@ const webpackMerge = require('webpack-merge');
 const commonPartial = require('./webpack/webpack.common');
 const clientPartial = require('./webpack/webpack.client');
 const serverPartial = require('./webpack/webpack.server');
-const { AotPlugin } = require('@ngtools/webpack');
+const { AngularCompilerPlugin } = require('@ngtools/webpack');
 
 module.exports = function (options, webpackOptions) {
   options = options || {};
@@ -11,7 +11,7 @@ module.exports = function (options, webpackOptions) {
 
     const clientConfig = webpackMerge({}, commonPartial, clientPartial, {
         plugins: [
-            new AotPlugin({
+            new AngularCompilerPlugin({
                 tsConfigPath: root('./src/tsconfig.browser.json'),
                 skipCodeGeneration: true
             })
@@ -19,7 +19,7 @@ module.exports = function (options, webpackOptions) {
     });
     const serverConfig = webpackMerge({}, commonPartial, serverPartial, {
         plugins: [
-            new AotPlugin({
+            new AngularCompilerPlugin({
                 tsConfigPath: root('./src/tsconfig.server.json'),
                 skipCodeGeneration: true
             })
