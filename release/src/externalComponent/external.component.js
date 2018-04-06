@@ -10,8 +10,6 @@ var ExternalComponent = /** @class */ (function () {
                     template: "<div class=\"content\"><h3>I am external!</h3></div>"
                 },] },
     ];
-    /** @nocollapse */
-    ExternalComponent.ctorParameters = function () { return []; };
     return ExternalComponent;
 }());
 exports.ExternalComponent = ExternalComponent;

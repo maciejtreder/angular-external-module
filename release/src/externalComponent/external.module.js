@@ -16,8 +16,6 @@ var ExternalModule = /** @class */ (function () {
                     ]
                 },] },
     ];
-    /** @nocollapse */
-    ExternalModule.ctorParameters = function () { return []; };
     return ExternalModule;
 }());
 exports.ExternalModule = ExternalModule;
